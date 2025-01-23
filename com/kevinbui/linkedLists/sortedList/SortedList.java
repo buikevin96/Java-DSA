@@ -1,7 +1,5 @@
 package com.kevinbui.linkedLists.sortedList;
 
-import com.kevinbui.linkedLists.queueLinkedList.FirstLastList;
-
 public class SortedList {
 
     private Link first; // first item on list
@@ -42,10 +40,10 @@ public class SortedList {
         return temp;    // return value
     }
 
-    public void displayList(){
+    public void displayList() {
         System.out.println("List (first-->last): ");
         Link current = first;   // start at beginning of list
-        while(current != null){ // until end of list
+        while (current != null) { // until end of list
             current.displayLink();  // print data
             current = current.next; // move to next link
         }

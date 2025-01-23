@@ -1,4 +1,4 @@
-package com.kevinbui.linklist2;
+package com.kevinbui.findDeleteLinks;
 
 public class LinkListApp {
         public static void main(String[] args) {

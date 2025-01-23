@@ -1,4 +1,4 @@
-package com.kevinbui.linklist2;
+package com.kevinbui.findDeleteLinks;
 
 public class Link {
 

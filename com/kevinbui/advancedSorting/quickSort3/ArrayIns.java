@@ -1,4 +1,8 @@
-package com.kevinbui.advancedSorting.quickSort2;
+/*
+    Demonstrates quick sort; uses insertion sort for cleanup
+ */
+
+package com.kevinbui.advancedSorting.quickSort3;
 
 public class ArrayIns {
 
@@ -27,12 +31,13 @@ public class ArrayIns {
 
     public void quickSort(){
         recQuickSort(0, nElems-1);
+        // insertionSort(0, nElems-1);  the other option
     }
 
     public void recQuickSort(int left, int right){
         int size = right - left + 1;
-        if (size <=3){              // manual sort if small
-            manualSort(left, right);
+        if (size < 10){              // manual sort if small
+            insertionSort(left, right);
         } else {                    // quicksort if large
             long median = medianof3(left, right);
             int partition = partitionIt(left, right, median);    // partition range
@@ -79,6 +84,21 @@ public class ArrayIns {
         }
         swap(leftPtr, right -1);           // restore pivot
         return leftPtr;                   // return partition
+    }
+
+    public void insertionSort(int left, int right){
+        int in, out;
+
+        // sorted on left of out
+        for(out= left+1; out<=right; out++){
+            long temp = theArray[out];      // remove marked item
+            in = out;                       // starts shifts at out until one is smaller
+            while(in > left && theArray[in - 1] >= temp){
+                theArray[in] = theArray[in-1];  // shift item to right
+                --in;                       // go left one position
+            }
+            theArray[in] = temp;            // insert marked item
+        }
     }
 
     public void manualSort(int left, int right){

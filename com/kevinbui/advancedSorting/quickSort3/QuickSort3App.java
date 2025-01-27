@@ -1,6 +1,6 @@
-package com.kevinbui.advancedSorting.quickSort2;
+package com.kevinbui.advancedSorting.quickSort3;
 
-public class QuickSort2App {
+public class QuickSort3App {
 
     public static void main(String[] args) {
         int maxSize = 16;       // array size
